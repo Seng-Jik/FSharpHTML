@@ -3,3 +3,5 @@
 ################################################################################
 
 /FSharpHTML/obj
+/FSharpHTML/bin
+/FSharpHTML/.vs/FSharpHTML

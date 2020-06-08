@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <Version>0.9.0</Version>
+    <Authors>Seng Jik</Authors>
+    <Company>Strrationalism</Company>
+    <Description>The DSL for generating HTML Document.</Description>
+    <PackageProjectUrl>https://github.com/Strrationalism/FSharpHTML</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Strrationalism/FSharpHTML</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OtherFlags></OtherFlags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AST.fs" />
+    <Compile Include="Generator.fs" />
+    <Compile Include="Document.fs" />
+    <Compile Include="Operators.fs" />
+    <Compile Include="Elements.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
+  </ItemGroup>
+
+</Project>
