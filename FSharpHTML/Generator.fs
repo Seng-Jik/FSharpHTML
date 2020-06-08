@@ -64,6 +64,9 @@ let rec generateContent indentLevel (sb:StringBuilder) = function
     indent indentLevel sb
     generateText sb text
     sb.AppendLine() |> ignore
+| InlineHTML html ->
+    indent indentLevel sb
+    sb.AppendLine(html) |> ignore
 | _ -> invalidArg "HTMLContent" "HTMLContent must not be Attribute."
 
 and private generateElement indentLevel (sb:StringBuilder) {Tag = tag; Children = children} =

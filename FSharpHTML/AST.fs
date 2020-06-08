@@ -15,4 +15,5 @@ and HTMLContent =
 | Element of HTMLElement
 | Meta of HTMLMetadata
 | Text of string
+| InlineHTML of string
 
